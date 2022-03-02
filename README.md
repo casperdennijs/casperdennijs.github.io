@@ -1,2 +1,2 @@
 # casperdennijs.github.io
-Personal website
+Static Portfolio website made with HTML5/CSS3/JavaScript
