@@ -105,7 +105,47 @@ header > nav > ul > li > a {
     text-decoration: none;
 }
 
-main > section:first-of-type {
+header > nav > ul > li > a.active {
+    font-weight: 600;
+}
+
+section.alert {
+    margin: 2em 0 0 0;
+    background-color: #f66f6f;
+    padding: 1em 1em 1em 1em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    transition: .25s;
+}
+
+section.alert:hover {
+    transform: scale(1.025);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+section.alert > i {
+    margin-left: auto;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+section.alert:hover > i {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+section.intro {
     margin: 6em 0 3em 0;
     padding: 4em 2em 4em 2em;
     background-color: #eeeeee;
@@ -115,48 +155,53 @@ main > section:first-of-type {
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-main > section:first-of-type > h1 {
+section.intro > h1 {
     font-size: 3em;
 }
 
-main > section:first-of-type > h1 span {
-    color: #7ac3ff;
+section.intro > h1 span.name {
+    color: #367db8;
     font-weight: 600;
 }
 
-main > section:first-of-type > p {
+section.intro > p {
     margin-top: 1em;
 }
 
-main > section:first-of-type > p:first-of-type {
+section.intro > p:first-of-type {
     font-size: 2em;
     font-weight: 200;
 }
 
-main > section:first-of-type > p:last-of-type {
+section.intro > p:last-of-type {
     font-size: 1.5em;
 }
 
-main > section:last-of-type {
+section.highlights,
+section.work {
     margin: 6em 0 3em 0;
 }
 
-main > section:last-of-type > h2 {
+section.highlights > h2,
+section.work > h2 {
     font-size: 2em;
     font-weight: 300;
     margin-bottom: 1.5em;
 }
 
-main > section:last-of-type > section {
+section.highlights > section,
+section.work > section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
 }
 
-main > section:last-of-type > section > article {
+section.highlights > section > article,
+section.work > section > article {
     background-color: black;
     border-radius: 1em;
-    height: 200px;
+    width: 400px;
+    aspect-ratio: 1 / 0.5;
     color: black;
     box-sizing: border-box;
     overflow: hidden;
@@ -170,27 +215,146 @@ main > section:last-of-type > section > article {
     transition: .5s;
 }
 
-main > section:last-of-type > section > article:hover {
+section.highlights > section > article:hover,
+section.work > section > article:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
-main > section:last-of-type > section > article:first-of-type {
-    background-color: rgb(255, 122, 122);
+article.apple {
+    background-image: url("../images/apple-remake.png");
+    background-size: cover;
 }
 
-main > section:last-of-type > section > article:nth-of-type(2) {
-    background-color: rgb(129, 255, 129);
+article.pokemon {
+    background-image: url("../images/pokemon-battle.png");
+    background-size: cover;
 }
 
-main > section:last-of-type > section > article:last-of-type {
-    background-color: rgb(130, 130, 255);
+article.lyrics {
+    background-image: url("../images/lyrics-video.png");
+    background-size: cover;
+    color: white !important;
 }
 
-main > section:last-of-type > section > article > p:first-of-type {
+article.matching {
+    background-color: #2d9c5b !important;
+}
+
+section.highlights > section > article > p,
+section.work > section > article > p {
+    user-select: none;
+}
+
+section.highlights > section > article > p:first-of-type,
+section.work > section > article > p:first-of-type {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: .5em;
+    transform: translateY(30px);
+    transition: .5s;
+}
+
+section.highlights > section > article > p:last-of-type,
+section.work > section > article > p:last-of-type {
+    transform: translateY(40px);
+    opacity: 0;
+    transition: .5s;
+}
+
+section.highlights > section > article:hover > p:first-of-type,
+section.work > section > article:hover > p:first-of-type {
+    transform: translateY(0px);
+}
+
+section.highlights > section > article:hover > p:last-of-type,
+section.work > section > article:hover > p:last-of-type {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+section.work > section.row:not(:first-of-type) {
+    margin-top: 1.5em;
+}
+
+section.about-me {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-sizing: border-box;
+    margin: 6em 0 3em 0;
+}
+
+section.about-me > section:last-of-type {
+    display: flex;
+    justify-content: end;
+}
+
+section.about-me > section > h2 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+}
+
+section.about-me > section > p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+section.about-me > section > a {
+    margin-right: 10px;
+}
+
+section.about-me > section > img {
+    width: 300px;
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+a.button {
+    display: inline-block;
+    background-color: #367db8;
+    margin-top: 1.5em;
+    padding: 1em;
+    color: white;
+    border-radius: .5em;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .25s;
+}
+
+a.button:hover {
+    background-color: #205e91;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+a.button-alt {
+    display: inline-block;
+    box-shadow: inset -2px 0 0 #367db8, inset 0 -2px 0 #367db8, inset 2px 0 0 #367db8, inset 0 2px 0 #367db8;
+    background-color: white;
+    margin-top: 1.5em;
+    padding: 1em;
+    color: #367db8;
+    border-radius: .5em;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.button-alt:hover {
+    background-color: #367db8;
+    color: white;
+    transition: .25s;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
