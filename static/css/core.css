@@ -358,3 +358,77 @@ a.button-alt:hover {
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
+
+section.highlights > a.button {
+    margin: 2em 0 6em 0;
+}
+
+article.info, 
+section.contact {
+    margin: 6em 0 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+article.info > h2.title, 
+section.contact > h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+article.info > h2.title,
+article.info > p {
+    max-width: 40rem;
+    width: 100%;
+}
+
+article.info > img.cover {
+    max-width: 45rem;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+article.info > h2.title,
+section.contact > h2 {
+    margin-bottom: 1em;
+}
+
+article.info > p,
+section.contact > p {
+    margin-bottom: 1em;
+}
+
+article.info > section {
+    margin-bottom: 6em;
+}
+
+section.contact > a.contact {
+    display: inline-block;
+    background-color: #367db8;
+    margin-top: 1em;
+    padding: 1em;
+    color: white;
+    border-radius: .5em;
+    width: 350px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .25s;
+}
+
+section.contact > a.contact:hover {
+    background-color: #205e91;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+section.contact > a.contact:not(:last-of-type) > i {
+    font-family: "Font Awesome 6 Brands" !important;
+}
