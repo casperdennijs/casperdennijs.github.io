@@ -67,7 +67,7 @@ i {
     font-family: "Font Awesome 6 Free" !important;
 }
 
-div.content {
+.content {
     max-width: 80em;
     width: 100%;
 }
@@ -109,7 +109,7 @@ header > nav > ul > li > a.active {
     font-weight: 600;
 }
 
-section.alert {
+.alert {
     margin: 2em 0 0 0;
     background-color: #f66f6f;
     padding: 1em 1em 1em 1em;
@@ -125,7 +125,7 @@ section.alert {
     transition: .25s;
 }
 
-section.alert:hover {
+.alert:hover {
     transform: scale(1.025);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
@@ -133,19 +133,19 @@ section.alert:hover {
     cursor: pointer;
 }
 
-section.alert > i {
+.alert > i {
     margin-left: auto;
     transform: translateX(50px);
     opacity: 0;
     transition: .5s;
 }
 
-section.alert:hover > i {
+.alert:hover > i {
     transform: translateX(0px);
     opacity: 1;
 }
 
-section.intro {
+.intro {
     margin: 6em 0 3em 0;
     padding: 4em 2em 4em 2em;
     background-color: #eeeeee;
@@ -155,49 +155,49 @@ section.intro {
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-section.intro > h1 {
+.intro > h1 {
     font-size: 3em;
 }
 
-section.intro > h1 span.name {
+.intro > h1 span.name {
     color: #367db8;
     font-weight: 600;
 }
 
-section.intro > p {
+.intro > p {
     margin-top: 1em;
 }
 
-section.intro > p:first-of-type {
+.intro > p:first-of-type {
     font-size: 2em;
     font-weight: 200;
 }
 
-section.intro > p:last-of-type {
+.intro > p:last-of-type {
     font-size: 1.5em;
 }
 
-section.highlights,
-section.work {
+.highlights,
+.work {
     margin: 6em 0 3em 0;
 }
 
-section.highlights > h2,
-section.work > h2 {
+.highlights > h2,
+.work > h2 {
     font-size: 2em;
     font-weight: 300;
     margin-bottom: 1.5em;
 }
 
-section.highlights > section,
-section.work > section {
+.highlights > section,
+.work > section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
 }
 
-section.highlights > section > article,
-section.work > section > article {
+.highlights > section > article,
+.work > section > article {
     background-color: black;
     border-radius: 1em;
     width: 400px;
@@ -215,8 +215,8 @@ section.work > section > article {
     transition: .5s;
 }
 
-section.highlights > section > article:hover,
-section.work > section > article:hover {
+.highlights > section > article:hover,
+.work > section > article:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
@@ -224,33 +224,33 @@ section.work > section > article:hover {
     cursor: pointer;
 }
 
-article.apple {
+.apple {
     background-image: url("../images/apple-remake.png");
     background-size: cover;
 }
 
-article.pokemon {
+.pokemon {
     background-image: url("../images/pokemon-battle.png");
     background-size: cover;
 }
 
-article.lyrics {
+.lyrics {
     background-image: url("../images/lyrics-video.png");
     background-size: cover;
     color: white !important;
 }
 
-article.matching {
+.matching {
     background-color: #2d9c5b !important;
 }
 
-section.highlights > section > article > p,
-section.work > section > article > p {
+.highlights > section > article > p,
+.work > section > article > p {
     user-select: none;
 }
 
-section.highlights > section > article > p:first-of-type,
-section.work > section > article > p:first-of-type {
+.highlights > section > article > p:first-of-type,
+.work > section > article > p:first-of-type {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: .5em;
@@ -258,64 +258,29 @@ section.work > section > article > p:first-of-type {
     transition: .5s;
 }
 
-section.highlights > section > article > p:last-of-type,
-section.work > section > article > p:last-of-type {
+.highlights > section > article > p:last-of-type,
+.work > section > article > p:last-of-type {
     transform: translateY(40px);
     opacity: 0;
     transition: .5s;
 }
 
-section.highlights > section > article:hover > p:first-of-type,
-section.work > section > article:hover > p:first-of-type {
+.highlights > section > article:hover > p:first-of-type,
+.work > section > article:hover > p:first-of-type {
     transform: translateY(0px);
 }
 
-section.highlights > section > article:hover > p:last-of-type,
-section.work > section > article:hover > p:last-of-type {
+.highlights > section > article:hover > p:last-of-type,
+.work > section > article:hover > p:last-of-type {
     transform: translateY(0px);
     opacity: 1;
 }
 
-section.work > section.row:not(:first-of-type) {
+.work > .row:not(:first-of-type) {
     margin-top: 1.5em;
 }
 
-section.about-me {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    box-sizing: border-box;
-    margin: 6em 0 3em 0;
-}
-
-section.about-me > section:last-of-type {
-    display: flex;
-    justify-content: end;
-}
-
-section.about-me > section > h2 {
-    font-size: 2em;
-    font-weight: 300;
-    margin-bottom: 1.5em;
-}
-
-section.about-me > section > p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-section.about-me > section > a {
-    margin-right: 10px;
-}
-
-section.about-me > section > img {
-    width: 300px;
-    border-radius: 1em;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
-}
-
-a.button {
+.button {
     display: inline-block;
     background-color: #367db8;
     margin-top: 1.5em;
@@ -329,14 +294,14 @@ a.button {
     transition: .25s;
 }
 
-a.button:hover {
+.button:hover {
     background-color: #205e91;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-a.button-alt {
+.button-alt {
     display: inline-block;
     box-shadow: inset -2px 0 0 #367db8, inset 0 -2px 0 #367db8, inset 2px 0 0 #367db8, inset 0 2px 0 #367db8;
     background-color: white;
@@ -350,7 +315,7 @@ a.button-alt {
     font-weight: 600;
 }
 
-a.button-alt:hover {
+.button-alt:hover {
     background-color: #367db8;
     color: white;
     transition: .25s;
@@ -359,12 +324,12 @@ a.button-alt:hover {
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-section.highlights > a.button {
+.highlights > .button {
     margin: 2em 0 6em 0;
 }
 
-article.info, 
-section.contact {
+.info, 
+.contact {
     margin: 6em 0 3em 0;
     display: flex;
     flex-direction: column;
@@ -372,19 +337,19 @@ section.contact {
     box-sizing: border-box;
 }
 
-article.info > h2.title, 
-section.contact > h2 {
+.info > .title, 
+.contact > h2 {
     font-size: 2em;
     font-weight: 600;
 }
 
-article.info > h2.title,
-article.info > p {
+.info > .title,
+.info > p {
     max-width: 40rem;
     width: 100%;
 }
 
-article.info > img.cover {
+.info > .cover {
     max-width: 45rem;
     width: 100%;
     margin-bottom: 1.5em;
@@ -394,21 +359,21 @@ article.info > img.cover {
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-article.info > h2.title,
-section.contact > h2 {
+.info > .title,
+.contact > h2 {
     margin-bottom: 1em;
 }
 
-article.info > p,
-section.contact > p {
+.info > p,
+.contact > p {
     margin-bottom: 1em;
 }
 
-article.info > section {
+.info > section {
     margin-bottom: 6em;
 }
 
-section.contact > a.contact {
+.contact > .contact {
     display: inline-block;
     background-color: #367db8;
     margin-top: 1em;
@@ -422,13 +387,13 @@ section.contact > a.contact {
     transition: .25s;
 }
 
-section.contact > a.contact:hover {
+.contact > .contact:hover {
     background-color: #205e91;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-section.contact > a.contact:not(:last-of-type) > i {
+.contact > .contact:not(:last-of-type) > i {
     font-family: "Font Awesome 6 Brands" !important;
 }
