@@ -189,15 +189,15 @@ header > nav > ul > li > a.active {
     margin-bottom: 1.5em;
 }
 
-.highlights > section,
-.work > section {
+.highlights > div,
+.work > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
 }
 
-.highlights > section > article,
-.work > section > article {
+.highlights > div > div,
+.work > div > div {
     background-color: black;
     border-radius: 1em;
     width: 400px;
@@ -215,8 +215,8 @@ header > nav > ul > li > a.active {
     transition: .5s;
 }
 
-.highlights > section > article:hover,
-.work > section > article:hover {
+.highlights > div > div:hover,
+.work > div > div:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
@@ -244,13 +244,13 @@ header > nav > ul > li > a.active {
     background-color: #2d9c5b !important;
 }
 
-.highlights > section > article > p,
-.work > section > article > p {
+.highlights > div > div > p,
+.work > div > div > p {
     user-select: none;
 }
 
-.highlights > section > article > p:first-of-type,
-.work > section > article > p:first-of-type {
+.highlights > div > div > p:first-of-type,
+.work > div > div > p:first-of-type {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: .5em;
@@ -258,20 +258,20 @@ header > nav > ul > li > a.active {
     transition: .5s;
 }
 
-.highlights > section > article > p:last-of-type,
-.work > section > article > p:last-of-type {
+.highlights > div > div > p:last-of-type,
+.work > div > div > p:last-of-type {
     transform: translateY(40px);
     opacity: 0;
     transition: .5s;
 }
 
-.highlights > section > article:hover > p:first-of-type,
-.work > section > article:hover > p:first-of-type {
+.highlights > div > article:hover > p:first-of-type,
+.work > div > article:hover > p:first-of-type {
     transform: translateY(0px);
 }
 
-.highlights > section > article:hover > p:last-of-type,
-.work > section > article:hover > p:last-of-type {
+.highlights > div > article:hover > p:last-of-type,
+.work > div > article:hover > p:last-of-type {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -373,7 +373,7 @@ header > nav > ul > li > a.active {
     margin-bottom: 6em;
 }
 
-.contact > .contact {
+.contact > .contact-link {
     display: inline-block;
     background-color: #367db8;
     margin-top: 1em;
@@ -385,15 +385,76 @@ header > nav > ul > li > a.active {
     text-decoration: none;
     font-weight: 600;
     transition: .25s;
+    box-sizing: border-box;
 }
 
-.contact > .contact:hover {
+.contact > .contact-link:hover {
     background-color: #205e91;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
-.contact > .contact:not(:last-of-type) > i {
+.contact > .contact-link:not(:last-of-type) > i {
     font-family: "Font Awesome 6 Brands" !important;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        padding: 1em;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header > nav {
+        margin-left: unset;
+        margin-top: 1em
+    }
+
+    .intro {
+        margin: 2em 0 2em 0;
+    }
+
+    .alert {
+        display: none;
+    }
+
+    .highlights {
+        margin: 4em 0 2em 0;
+    }
+
+    .work {
+        margin: 2em 0 2em 0;
+    }
+
+    .highlights > h2,
+    .work > h2 {
+        font-size: 1.75em;
+    }
+
+    .highlights > div,
+    .work > div {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .highlights > div > div,
+    .work > div > div {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .intro > h1 {
+        font-size: 2em;
+    }
+    
+    .intro > p:first-of-type {
+        font-size: 1.75em;
+    }
+    
+    .intro > p:last-of-type {
+        font-size: 1.25em;
+    }
 }

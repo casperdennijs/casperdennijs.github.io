@@ -1,12 +1,12 @@
-const alert = document.querySelector("section.alert");
+const alert = document.querySelector(".alert");
 
 alert.addEventListener("click", () => {
     alert.remove();
 })
 
-const apple = document.querySelector("article.apple");
-const pokemon = document.querySelector("article.pokemon");
-const lyrics = document.querySelector("article.lyrics");
+const apple = document.querySelector(".apple");
+const pokemon = document.querySelector(".pokemon");
+const lyrics = document.querySelector(".lyrics");
 
 apple.addEventListener("click", () => {
     window.location.href = "portfolio/apple-remake.html";
